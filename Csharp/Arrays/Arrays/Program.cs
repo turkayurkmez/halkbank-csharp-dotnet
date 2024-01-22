@@ -2,7 +2,7 @@
 Console.WriteLine("Hello, World!");
 //1. Tüm elemanları bildiğim durum:
 string[] days = new string[] { "Monday", "Tuesday", "Wednesday" };
-days[3] = "Thursday";
+//days[3] = "Thursday";
 //2. Sadece kapasitesini bildiğim durum:
 string[] students = new string[9];
 
@@ -58,6 +58,7 @@ for (int i = 0; i < 100; i++)
     string result = numberToString(i);
     Console.WriteLine(result);
 }
+
 
 
 
