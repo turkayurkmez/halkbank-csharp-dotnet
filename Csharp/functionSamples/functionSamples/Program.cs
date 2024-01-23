@@ -126,7 +126,7 @@
         }
 
 
-        static double getAreaOptionalWithEnum(double unit1, double unit2 = 1, ShapeType shape = ShapeType.Square)
+        static double getAreaOptionalWithEnum(double unit1, double unit2 = 1, ShapeType shape = ShapeType.Circle)
         {
             switch (shape)
             {
