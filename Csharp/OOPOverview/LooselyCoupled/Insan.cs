@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace LooselyCoupled
 {
-    internal class Insan
+
+    public interface IKiyafet
     {
+
+    }
+    public class UstGiyim : IKiyafet { }
+    public class Kazak : UstGiyim { }
+    public class KirmiziKazak : Kazak
+    {
+
+    }
+    public abstract class Insan
+    {
+        public void Giy(IKiyafet ustGiyim)
+        {
+
+        }
     }
 }
