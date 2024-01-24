@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace AbstractVSInterface
 {
+    public interface IPrintable
+    {
+        void Print();
+    }
+
+    public interface IAttachable
+    {
+        void Attach();
+    }
+
     public abstract class Document
     {
         public string Title { get; set; }
@@ -22,19 +32,24 @@ namespace AbstractVSInterface
 
         public abstract void Save();
         public abstract void Load();
-        public abstract void Print();
+        //public abstract void Print();
 
 
     }
 
-    public class WordDocument : Document
+    public class WordDocument : Document, IPrintable, IAttachable
     {
+        public void Attach()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void Load()
         {
             throw new NotImplementedException();
         }
 
-        public override void Print()
+        public void Print()
         {
             Console.WriteLine("Word çıktısı alındı");
         }
@@ -45,14 +60,14 @@ namespace AbstractVSInterface
         }
     }
 
-    public class ExcelDocument : Document
+    public class ExcelDocument : Document, IPrintable
     {
         public override void Load()
         {
             throw new NotImplementedException();
         }
 
-        public override void Print()
+        public void Print()
         {
             Console.WriteLine("Excel çıktısı alındı");
 
@@ -71,11 +86,6 @@ namespace AbstractVSInterface
             throw new NotImplementedException();
         }
 
-        public override void Print()
-        {
-            Console.WriteLine("PDF çıktısı alındı");
-
-        }
 
         public override void Save()
         {
@@ -86,7 +96,7 @@ namespace AbstractVSInterface
 
     public class PrinterComponent
     {
-        public void Print(Document document)
+        public void Print(IPrintable document)
         {
             document.Print();
         }
