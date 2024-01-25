@@ -13,11 +13,15 @@ var product = new { Ad = "Mouse", Fiyat = 2000 };
 var products = new ProductService().GetProducts();
 
 var spesificProducts = from p in products
-                       select p;
+                       select new
+                       {
+                           Ad = p.Name,
+                           Fiyat = p.Price
+                       };
 
-spesificProducts.ToList().ForEach(p => Console.WriteLine(p.CategoryName));
+spesificProducts.ToList().ForEach(p => Console.WriteLine(p.Ad));
 
-//select Name, Price from products
+//select Name 'Ad', Price 'Fiyat' from products
 
 
 
