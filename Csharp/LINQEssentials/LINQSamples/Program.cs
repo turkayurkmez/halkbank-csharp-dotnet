@@ -70,5 +70,60 @@ Console.WriteLine($"{singleProduct?.Name}\t{singleProduct?.Price}\t{singleProduc
 #endregion
 
 
+Console.WriteLine("Açıklamasına ve sonra fiyata göre ürünler:");
+Console.WriteLine("-----------------------------------------------------");
+allPoducts.Where(p => p.Category.Name.Contains("Telefon"))
+          .Select(p => new { p.Name, p.Price, p.Description, CategoryName = p?.Category?.Name })
+          .OrderByDescending(p => p.Description)
+          .ThenByDescending(p => p.Price)
 
+          .ToList()
+
+          .ForEach(p => Console.WriteLine($"{p.Name}\t{p.Price}\t{p.Description}\t{p.CategoryName}"));
+
+
+
+/* SELECT * FROM Products 
+ * WHERE Products.Category.Name = "Telefon"
+ * ORDER BY Description DESC
+ * ORDER BY Price ASC
+*/
+
+var totalPrice = allPoducts.Sum(p => p.Price);
+var averagePrice = allPoducts.Average(p => p.Price);
+Console.WriteLine("Toplam Fiyat\tOrtalama Fiyat\tMaksimum\tMinimum");
+Console.WriteLine($"{totalPrice}.....\t{Math.Ceiling(averagePrice)}.........\t{allPoducts.Max(p => p.Price)}.....\t{allPoducts.Min(p => p.Price)}");
+
+Console.WriteLine("En pahalı ürün:");
+Console.WriteLine("-------------------");
+var expensiveProduct = allPoducts.FirstOrDefault(p => p.Price == allPoducts.Max(p => p.Price));
+Console.WriteLine($"{expensiveProduct.Name}\t{expensiveProduct.Price}");
+
+var expensiveAfterdotnet6 = allPoducts.MaxBy(p => p.Price);
+Console.WriteLine($"{expensiveAfterdotnet6.Name}\t{expensiveAfterdotnet6.Price}");
+
+Console.WriteLine("Maksimum");
+Console.WriteLine($"{allPoducts.Max().Price}");
+
+var categories = new ProductService().GetCategories();
+
+var anotherAllProducts = new ProductService().GetProducts();
+var joinQuery = categories.Join(anotherAllProducts,
+                                category => category,
+                                product => product.Category,
+                                (category, product) => new { KategoriAdi = category.Name, UrunAdi = product.Name }).ToList();
+
+Console.WriteLine("JOIN sonucu:");
+Console.WriteLine("......................");
+foreach (var item in joinQuery)
+{
+    Console.WriteLine($"{item.KategoriAdi}: {item.UrunAdi}");
+}
+
+Console.WriteLine("Alternatif:");
+Console.WriteLine("-------------------------");
+anotherAllProducts.Select(p => new { ProductName = p.Name, CategoryName = p.Category.Name })
+                  .ToList()
+
+                .ForEach(p => Console.WriteLine($"{p.ProductName}, {p.CategoryName}"));
 
