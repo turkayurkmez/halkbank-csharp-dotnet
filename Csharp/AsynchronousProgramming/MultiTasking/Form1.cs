@@ -17,6 +17,7 @@
         {
             await Task.Run(counter);
             MessageBox.Show("Bitti");
+
         }
 
         private Task counter()

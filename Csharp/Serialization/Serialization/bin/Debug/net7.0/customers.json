@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Name": "T\u00FCrkay",
+    "Address": "Odunpazar\u0131",
+    "City": "Eski\u015Fehir",
+    "Country": "T\u00FCrkiye"
+  },
+  {
+    "Id": 2,
+    "Name": "Zeynep",
+    "Address": "Pendik",
+    "City": "\u0130stanbul",
+    "Country": "T\u00FCrkiye"
+  },
+  {
+    "Id": 3,
+    "Name": "Burcu",
+    "Address": "Dam Square",
+    "City": "Amsterdam",
+    "Country": "Hollanda"
+  }
+]

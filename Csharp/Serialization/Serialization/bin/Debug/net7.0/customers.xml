@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Customer>
+    <Id>1</Id>
+    <Name>Türkay</Name>
+    <Address>Odunpazarı</Address>
+    <City>Eskişehir</City>
+    <Country>Türkiye</Country>
+  </Customer>
+  <Customer>
+    <Id>2</Id>
+    <Name>Zeynep</Name>
+    <Address>Pendik</Address>
+    <City>İstanbul</City>
+    <Country>Türkiye</Country>
+  </Customer>
+  <Customer>
+    <Id>3</Id>
+    <Name>Burcu</Name>
+    <Address>Dam Square</Address>
+    <City>Amsterdam</City>
+    <Country>Hollanda</Country>
+  </Customer>
+</ArrayOfCustomer>
