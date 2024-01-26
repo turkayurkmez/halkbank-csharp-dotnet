@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,13 @@ namespace LINQSamples
         public int Id { get; set; }
         public string Name { get; set; }
     }
-    public class Product : IComparable<Product>
+    public class Product : IComparable<Product>, IEqualityComparer<Product>
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Category? Category { get; set; }
+        public int? CategoryId { get; set; }
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public bool IsStock { get; set; }
@@ -29,6 +31,16 @@ namespace LINQSamples
 
 
 
+        }
+
+        public bool Equals(Product? x, Product? y)
+        {
+            return x.Name == y.Name;
+        }
+
+        public int GetHashCode([DisallowNull] Product obj)
+        {
+            return obj.Name.GetHashCode();
         }
     }
 
@@ -53,7 +65,7 @@ namespace LINQSamples
                 new(){ Id=6, Name ="Telefon B", Description="Android", IsStock= true, Price=10500, Category = phone},
                 new(){ Id=7, Name ="Telefon C", Description="IoS", IsStock= true, Price=78500, Category = phone},
                 new(){ Id= 8, Name ="Telefon D", Description="Android", IsStock= true, Price=12500, Category = phone},
-                new(){ Id= 9, Name ="Tekstil X", Description="Tişört", IsStock= true, Price=500, Category = phone},
+                new(){ Id= 9, Name ="Tekstil X", Description="Tişört", IsStock= true, Price=500, Category = _categories[3]},
 
 
 
