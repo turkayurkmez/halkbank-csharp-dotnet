@@ -1,0 +1,24 @@
+﻿@model Visitor
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    Merhaba @Model.Name!
+    @if (Model.IsComing.HasValue && Model.IsComing.Value)
+    {
+        <p>Gelmene çok sevindik! @Model.Email adresine buluşma hakkında mail atacağız.</p>
+    }
+    else
+    {
+        <p>Gelemeyeceğin için üzgünüz. Bir dahaki sefere!</p>
+    }
+</body>
+</html>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using intro.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace intro.Controllers
 {
@@ -16,6 +17,15 @@ namespace intro.Controllers
         public IActionResult rsvp()
         {
 
+            return View();
+        }
+        [HttpPost]
+        public IActionResult rsvp(Visitor visitor)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", visitor);
+            }
             return View();
         }
     }

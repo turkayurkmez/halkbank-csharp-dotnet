@@ -1,4 +1,6 @@
 ﻿
+@model Visitor
+
 @{
     Layout = null;
 }
@@ -11,5 +13,30 @@
     <title>rsvp</title>
 </head>
 <body>
+    <form asp-action="rsvp" asp-controller="Main">
+        <div>
+            <input asp-for="Name"  placeholder="İsminiz"/>
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <input asp-for="Email" placeholder="Eposta" />
+            <span asp-validation-for="Email"></span>
+
+        </div>
+        <div>
+            <p>
+                Lütfen seçim yapın
+            </p>
+            <select asp-for="IsComing">
+                <option value="">Bilmiyorum</option>
+                <option value="True">Evet geliyorum</option>
+                <option value="False">Hayır gelmiyorum</option>
+                
+            </select>
+        </div>
+        <div>
+            <button type="submit">Gönder</button>
+        </div>
+    </form>
 </body>
 </html>
