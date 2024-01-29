@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "eshop.MVC/1.0.0": {
+        "dependencies": {
+          "eshop.Services": "1.0.0"
+        },
+        "runtime": {
+          "eshop.MVC.dll": {}
+        }
+      },
+      "eshop.DataAccess/1.0.0": {
+        "runtime": {
+          "eshop.DataAccess.dll": {}
+        }
+      },
+      "eshop.Services/1.0.0": {
+        "dependencies": {
+          "eshop.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "eshop.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "eshop.MVC/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eshop.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eshop.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
