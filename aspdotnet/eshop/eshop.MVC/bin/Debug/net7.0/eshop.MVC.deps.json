@@ -15,8 +15,16 @@
         }
       },
       "eshop.DataAccess/1.0.0": {
+        "dependencies": {
+          "eshop.Entities": "1.0.0"
+        },
         "runtime": {
           "eshop.DataAccess.dll": {}
+        }
+      },
+      "eshop.Entities/1.0.0": {
+        "runtime": {
+          "eshop.Entities.dll": {}
         }
       },
       "eshop.Services/1.0.0": {
@@ -36,6 +44,11 @@
       "sha512": ""
     },
     "eshop.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "eshop.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

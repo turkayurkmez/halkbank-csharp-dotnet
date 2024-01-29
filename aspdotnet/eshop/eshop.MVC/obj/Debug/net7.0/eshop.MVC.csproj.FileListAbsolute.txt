@@ -34,3 +34,5 @@ C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotne
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.Services.pdb
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.DataAccess.pdb
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\obj\Debug\net7.0\eshop.MVC.csproj.CopyComplete
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.Entities.dll
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.Entities.pdb

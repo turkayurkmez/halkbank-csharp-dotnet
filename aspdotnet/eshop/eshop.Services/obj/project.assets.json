@@ -5,11 +5,24 @@
       "eshop.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "eshop.Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/eshop.DataAccess.dll": {}
         },
         "runtime": {
           "bin/placeholder/eshop.DataAccess.dll": {}
+        }
+      },
+      "eshop.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/eshop.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eshop.Entities.dll": {}
         }
       }
     }
@@ -19,6 +32,11 @@
       "type": "project",
       "path": "../eshop.DataAccess/eshop.DataAccess.csproj",
       "msbuildProject": "../eshop.DataAccess/eshop.DataAccess.csproj"
+    },
+    "eshop.Entities/1.0.0": {
+      "type": "project",
+      "path": "../eshop.Entities/eshop.Entities.csproj",
+      "msbuildProject": "../eshop.Entities/eshop.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
