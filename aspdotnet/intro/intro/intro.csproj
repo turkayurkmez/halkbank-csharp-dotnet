@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.bundle.min.js" />
+  </ItemGroup>
+
 </Project>

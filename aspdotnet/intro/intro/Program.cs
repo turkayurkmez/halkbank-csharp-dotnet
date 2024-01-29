@@ -6,6 +6,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 app.UseRouting();
+app.UseStaticFiles();
 
 app.MapControllerRoute("default", "{controller=Main}/{action=Index}/{id?}");
 

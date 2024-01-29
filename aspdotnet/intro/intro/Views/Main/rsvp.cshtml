@@ -1,42 +1,27 @@
-﻿
-@model Visitor
+﻿@model Visitor
+<form asp-action="rsvp" asp-controller="Main">
+    <div>
+        <input asp-for="Name" placeholder="İsminiz" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <input asp-for="Email" placeholder="Eposta" class="form-control" /><br />
+        <span asp-validation-for="Email" class="alert alert-danger"></span>
 
-@{
-    Layout = null;
-}
+    </div>
+    <div>
+        <p>
+            Lütfen seçim yapın
+        </p>
+        <select asp-for="IsComing" class="form-control">
+            <option value="">Bilmiyorum</option>
+            <option value="True">Evet geliyorum</option>
+            <option value="False">Hayır gelmiyorum</option>
 
-<!DOCTYPE html>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Gönder</button>
+    </div>
+</form>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>rsvp</title>
-</head>
-<body>
-    <form asp-action="rsvp" asp-controller="Main">
-        <div>
-            <input asp-for="Name"  placeholder="İsminiz"/>
-            <span asp-validation-for="Name"></span>
-        </div>
-        <div>
-            <input asp-for="Email" placeholder="Eposta" />
-            <span asp-validation-for="Email"></span>
-
-        </div>
-        <div>
-            <p>
-                Lütfen seçim yapın
-            </p>
-            <select asp-for="IsComing">
-                <option value="">Bilmiyorum</option>
-                <option value="True">Evet geliyorum</option>
-                <option value="False">Hayır gelmiyorum</option>
-                
-            </select>
-        </div>
-        <div>
-            <button type="submit">Gönder</button>
-        </div>
-    </form>
-</body>
-</html>

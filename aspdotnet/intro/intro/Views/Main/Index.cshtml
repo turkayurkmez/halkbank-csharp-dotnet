@@ -1,31 +1,23 @@
-﻿
-<html>
-<head>
-</head>
-<body>
-    <p>Burası Main controller'ı içindeki Index action'u</p>
-    <p>Merhaba @ViewBag.Name</p>
-    @if (ViewBag.ZiyaretSaati >=12)
+﻿<p>Burası Main controller'ı içindeki Index action'u</p>
+<p>Merhaba @ViewBag.Name</p>
+@if (ViewBag.ZiyaretSaati >= 12)
+{
+    <p>İyi günler</p>
+}
+else
+{
+    <p>Günaydın</p>
+}
+
+<h3>Şehirler</h3>
+<ul>
+    @foreach (var item in ViewBag.Cities)
     {
-        <p>İyi günler</p>
+        <li>@item</li>
     }
-    else
-    {
-        <p>Günaydın</p>
-    }
+</ul>
 
-    <h3>Şehirler</h3>
-    <ul>
-        @foreach (var item in ViewBag.Cities)
-        {
-            <li>@item</li>
-        }
-    </ul>
-
-    <!--
-        Davetiyeyi görmek için <a href="/Main/rsvp">tıklayın</a>
-    -->
-    Davetiyeyi doldurmak için <a asp-controller="Main" asp-action="rsvp" >tıklayın</a>
-
-</body>
-</html>
+<!--
+    Davetiyeyi görmek için <a href="/Main/rsvp">tıklayın</a>
+-->
+    Davetiyeyi doldurmak için <a asp-controller="Main" asp-action="rsvp" class="btn btn-primary">tıklayın</a>
