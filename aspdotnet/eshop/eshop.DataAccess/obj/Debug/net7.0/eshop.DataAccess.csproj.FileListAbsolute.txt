@@ -13,3 +13,5 @@ C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotne
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.DataAccess\bin\Debug\net7.0\eshop.Entities.dll
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.DataAccess\bin\Debug\net7.0\eshop.Entities.pdb
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.DataAccess\obj\Debug\net7.0\eshop.DataAccess.csproj.CopyComplete
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.DataAccess\bin\Debug\net7.0\eshop.DataAccess.runtimeconfig.json
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.DataAccess\obj\Debug\net7.0\eshop.DataAccess.genruntimeconfig.cache

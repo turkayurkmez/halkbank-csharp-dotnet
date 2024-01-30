@@ -23,12 +23,37 @@ namespace eshop.DataAccess
             };
         }
 
+        public Task Create(Product entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Product> GetAll()
         {
             return _products;
         }
 
+        public Task<IEnumerable<Product>> GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Product> GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Product> GetProductsByName(string productName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update(Product entity)
         {
             throw new NotImplementedException();
         }
