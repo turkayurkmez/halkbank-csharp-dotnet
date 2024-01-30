@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<p>
+    Singleton: @ViewBag.SingletonValue
+</p>
+<p>
+    Transient: @ViewBag.TransientValue
+</p>
+<p>
+    Scoped: @ViewBag.ScopedValue
+</p>
+<hr />
+<p>
+    Singleton on another object:  @ViewBag.SingletonScope
+</p>
+<p>
+    Transient on another object:  @ViewBag.TransientScope
+</p>
+<p>
+    Scoped on another object:  @ViewBag.ScopedScope
+</p>
