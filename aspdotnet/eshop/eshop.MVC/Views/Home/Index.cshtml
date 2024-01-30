@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<ProductDisplayResponse>
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -12,16 +12,7 @@
     @foreach (var product in Model)
     {
         <div class="col-3">
-            <div class="card">
-                <img src="@product.ImageUrl" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">@product.Name</h5>
-                    <p class="card-text">@product.Description</p>
-                    <p class="card-text">@product.Price</p>
-
-                    <a href="#" class="btn btn-primary">Sepete Ekle</a>
-                </div>
-            </div>
+            <partial name="_ProductCard" model="@product"/>
         </div>
     }
 </div>

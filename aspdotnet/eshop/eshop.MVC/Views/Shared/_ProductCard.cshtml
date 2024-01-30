@@ -1,0 +1,12 @@
+﻿@model ProductDisplayResponse
+
+<div class="card">
+    <img src="@Model.ImageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.Price</p>
+
+        <button class="btn btn-primary">Sepete Ekle</button>
+    </div>
+</div>

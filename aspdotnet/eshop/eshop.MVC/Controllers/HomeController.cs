@@ -19,9 +19,10 @@ namespace eshop.MVC.Controllers
 
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int? catid = null)
         {
-            var products = productService.GetProducts();
+            var products = catid is null ? await productService.GetProductsAsync() :
+                                           await productService.GetProductsByCategoryIdAsync(catid.Value);
             return View(products);
         }
 

@@ -10,5 +10,10 @@ namespace eshop.DataAccess
     public interface IProductRepository : IRepository<Product>
     {
         IEnumerable<Product> GetProductsByName(string productName);
+        Task<IEnumerable<Product>> GetProductsByNameAsync(string productName);
+
+        Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId);
+
+
     }
 }
