@@ -117,6 +117,9 @@ namespace eshop.Services
                 Description = request.Description,
                 ImageUrl = request.ImageUrl,
                 Id = request.Id,
+                Price = request.Price,
+                Stock = request.Stock,
+
 
             };
 

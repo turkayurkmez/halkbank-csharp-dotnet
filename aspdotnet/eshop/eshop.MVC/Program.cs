@@ -1,6 +1,7 @@
 ﻿using eshop.DataAccess;
 using eshop.DataAccess.DataContext;
 using eshop.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,15 @@ builder.Services.AddDbContext<EshopDbContext>(option => option.UseSqlServer(conn
 //.net core' session varsayılan olarak disbled durumdadır. 
 // HttpContext üzerinden erişilebilmesi için:
 builder.Services.AddSession();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Account/Login";
+                    option.ReturnUrlParameter = "gidilecekSayfa";
+                    option.AccessDeniedPath = "/Account/ErisimEngellendi";
+                });
+
 
 
 var app = builder.Build();

@@ -17,7 +17,8 @@ namespace eshop.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var shoppingCard = getCardCollectionFromSession();
+            return View(shoppingCard);
         }
 
         public async Task<IActionResult> Add(int id)
@@ -66,7 +67,7 @@ namespace eshop.MVC.Controllers
             //var json = HttpContext.Session.GetString("shop");
             //return JsonConvert.DeserializeObject<ProductCardCollection>(json);
 
-            var collection = HttpContext.Session.GetJson<ProductCardCollection>("shop");
+            var collection = HttpContext.Session.GetJson<ProductCardCollection>("shop") ?? new ProductCardCollection();
             return collection;
 
 
