@@ -73,6 +73,7 @@ namespace eshop.Services
                 Description = p.Description,
                 ImageUrl = p.ImageUrl,
                 Id = p.Id,
+                Price = p.Price,
             });
             return response;
         }

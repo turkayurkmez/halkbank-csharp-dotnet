@@ -1,4 +1,4 @@
-using eshop.DataAccess;
+﻿using eshop.DataAccess;
 using eshop.DataAccess.DataContext;
 using eshop.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +18,11 @@ var connectionString = builder.Configuration.GetConnectionString("db");
 builder.Services.AddDbContext<EshopDbContext>(option => option.UseSqlServer(connectionString));
 
 
+//.net core' session varsayılan olarak disbled durumdadır. 
+// HttpContext üzerinden erişilebilmesi için:
+builder.Services.AddSession();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,8 +35,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

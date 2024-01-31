@@ -1,6 +1,9 @@
 ﻿@model IEnumerable<ProductDisplayResponse>
 @{
     ViewData["Title"] = "Home Page";
+
+    var counter = 0;
+    var activeClass = string.Empty;
 }
 
 <div class="text-center">
@@ -8,11 +11,49 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div class="row">
+<div class="row m-2">
     @foreach (var product in Model)
     {
+        @if (counter !=0 && counter % 4 == 0)
+        {
+            @:</div><div class="row m-2">
+        }
         <div class="col-3">
             <partial name="_ProductCard" model="@product"/>
         </div>
+        counter++;
     }
 </div>
+
+
+  <ul class="pagination pagination-lg">
+    @for (int i = 1; i <= ViewBag.TotalPages; i++)
+    {
+        activeClass = i == ViewBag.CurrentPage ? "active" : string.Empty; 
+        <li class="page-item @activeClass">
+            <a class="page-link" asp-controller="Home" asp-action="Index" asp-route-page="@i" asp-route-catid="@ViewBag.CategoryId">@i</a>
+        </li>
+    }
+   
+  </ul>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            $('.shop').on('click',function(){
+                let id = $(this).data('id');
+                $.ajax({
+                    url:'/ShoppingCard/Add/'+id,
+                    type: 'GET',
+                    success: function(data){
+                        console.log(data);
+                    },
+                    error: function(err){
+                        console.log(err);
+                    }
+                });
+            });
+        });
+    </script>
+
+}

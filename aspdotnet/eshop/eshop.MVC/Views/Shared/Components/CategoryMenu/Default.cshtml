@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<CategoryMenuResponse>
 <div class="list-group">
-   
+
+    <a asp-action="Index" asp-controller="Home" class="list-group-item list-group-item-action">Tüm Kategoriler</a>
     @foreach (var item in Model)
     {
         <a asp-action="Index" asp-controller="Home" asp-route-catid="@item.Id" class="list-group-item list-group-item-action">@item.Name</a>
-    }
-   
+    }  
   
 </div>
