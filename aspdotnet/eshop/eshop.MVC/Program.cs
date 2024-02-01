@@ -1,7 +1,6 @@
-﻿using eshop.DataAccess;
-using eshop.DataAccess.DataContext;
-using eshop.MVC.Extensions;
-using eshop.Services;
+﻿
+using eshop.Extensions;
+
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 

@@ -43,6 +43,10 @@ namespace eshop.Services
         public async Task<ProductDisplayResponse> GetProductAsync(int id)
         {
             var product = await repository.GetById(id);
+            if (product == null)
+            {
+                return null;
+            }
             var response = new ProductDisplayResponse()
             {
                 CategoryId = product.CategoryId,

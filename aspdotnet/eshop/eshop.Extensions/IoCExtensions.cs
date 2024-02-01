@@ -4,7 +4,7 @@ using eshop.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace eshop.MVC.Extensions
+namespace eshop.Extensions
 {
     public static class IoCExtensions
     {

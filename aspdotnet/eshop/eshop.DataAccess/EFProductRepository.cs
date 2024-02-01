@@ -45,7 +45,7 @@ namespace eshop.DataAccess
 
         public async Task<Product> GetById(int id)
         {
-            return await dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return await dbContext.Products.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId)
@@ -68,6 +68,13 @@ namespace eshop.DataAccess
             dbContext.Products.Update(entity);
             await dbContext.SaveChangesAsync();
 
+        }
+        /*
+         * Aşağıdaki fonksiyon AsNoTracking() diyerek çözdüğümüz hatanın alternatifidir. Doğrudan verilen id'de bir satır olup olmadığına bakar:  
+         */
+        public async Task<bool> IsProductExists(int id)
+        {
+            return await dbContext.Products.AnyAsync(p => p.Id == id);
         }
     }
 }
