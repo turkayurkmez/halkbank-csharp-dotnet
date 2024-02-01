@@ -257,3 +257,5 @@ C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotne
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.Extensions.dll
+C:\Users\turka\source\repos\Kurumsal\Halkbank\CSharp And dotnet\Group 1\aspdotnet\eshop\eshop.MVC\bin\Debug\net7.0\eshop.Extensions.pdb

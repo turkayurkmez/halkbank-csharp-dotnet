@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.MVC", "eshop.MVC\eshop.MVC.csproj", "{D96C7261-F0A9-4A39-B44B-B5A1D3D47A50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.MVC", "eshop.MVC\eshop.MVC.csproj", "{D96C7261-F0A9-4A39-B44B-B5A1D3D47A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Services", "eshop.Services\eshop.Services.csproj", "{D30DC53C-2E71-485D-8FE4-642EE5B2D9A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.Services", "eshop.Services\eshop.Services.csproj", "{D30DC53C-2E71-485D-8FE4-642EE5B2D9A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.DataAccess", "eshop.DataAccess\eshop.DataAccess.csproj", "{7FC51A55-8D79-453C-9467-A563CB7CFAC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.DataAccess", "eshop.DataAccess\eshop.DataAccess.csproj", "{7FC51A55-8D79-453C-9467-A563CB7CFAC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Entities", "eshop.Entities\eshop.Entities.csproj", "{7E8A9B42-772B-43D0-ADE5-AD5BF4616234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.Entities", "eshop.Entities\eshop.Entities.csproj", "{7E8A9B42-772B-43D0-ADE5-AD5BF4616234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Extensions", "eshop.Extensions\eshop.Extensions.csproj", "{FBE04616-36DC-4E5A-910D-F5B2D10ADCE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7E8A9B42-772B-43D0-ADE5-AD5BF4616234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E8A9B42-772B-43D0-ADE5-AD5BF4616234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E8A9B42-772B-43D0-ADE5-AD5BF4616234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE04616-36DC-4E5A-910D-F5B2D10ADCE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE04616-36DC-4E5A-910D-F5B2D10ADCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE04616-36DC-4E5A-910D-F5B2D10ADCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE04616-36DC-4E5A-910D-F5B2D10ADCE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

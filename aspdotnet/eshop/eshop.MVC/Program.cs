@@ -1,5 +1,6 @@
 ﻿using eshop.DataAccess;
 using eshop.DataAccess.DataContext;
+using eshop.MVC.Extensions;
 using eshop.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
@@ -10,16 +11,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IProductRepository, EFProductRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+//builder.Services.AddScoped<IProductService, ProductService>();
+//builder.Services.AddScoped<IProductRepository, EFProductRepository>();
+//builder.Services.AddScoped<ICategoryService, CategoryService>();
+//builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+//builder.Services.AddScoped<IUserService, UserService>();
 
 var connectionString = builder.Configuration.GetConnectionString("db");
-builder.Services.AddDbContext<EshopDbContext>(option => option.UseSqlServer(connectionString));
+//builder.Services.AddDbContext<EshopDbContext>(option => option.UseSqlServer(connectionString));
+builder.Services.AddIoCRequirements(connectionString);
 
 
-//.net core' session varsayılan olarak disbled durumdadır. 
+
+//.net core' session varsayılan olarak disabled durumdadır. 
 // HttpContext üzerinden erişilebilmesi için:
 builder.Services.AddSession();
 

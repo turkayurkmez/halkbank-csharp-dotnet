@@ -3867,6 +3867,19 @@
           "bin/placeholder/eshop.Entities.dll": {}
         }
       },
+      "eshop.Extensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "eshop.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/eshop.Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/eshop.Extensions.dll": {}
+        }
+      },
       "eshop.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -11211,6 +11224,11 @@
       "path": "../eshop.Entities/eshop.Entities.csproj",
       "msbuildProject": "../eshop.Entities/eshop.Entities.csproj"
     },
+    "eshop.Extensions/1.0.0": {
+      "type": "project",
+      "path": "../eshop.Extensions/eshop.Extensions.csproj",
+      "msbuildProject": "../eshop.Extensions/eshop.Extensions.csproj"
+    },
     "eshop.Services/1.0.0": {
       "type": "project",
       "path": "../eshop.Services/eshop.Services.csproj",
@@ -11221,6 +11239,7 @@
     "net7.0": [
       "Microsoft.EntityFrameworkCore.Design >= 7.0.15",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
+      "eshop.Extensions >= 1.0.0",
       "eshop.Services >= 1.0.0"
     ]
   },
@@ -11257,6 +11276,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\CSharp And dotnet\\Group 1\\aspdotnet\\eshop\\eshop.Extensions\\eshop.Extensions.csproj": {
+              "projectPath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\CSharp And dotnet\\Group 1\\aspdotnet\\eshop\\eshop.Extensions\\eshop.Extensions.csproj"
+            },
             "C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\CSharp And dotnet\\Group 1\\aspdotnet\\eshop\\eshop.Services\\eshop.Services.csproj": {
               "projectPath": "C:\\Users\\turka\\source\\repos\\Kurumsal\\Halkbank\\CSharp And dotnet\\Group 1\\aspdotnet\\eshop\\eshop.Services\\eshop.Services.csproj"
             }
