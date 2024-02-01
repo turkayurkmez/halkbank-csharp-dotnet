@@ -18,7 +18,7 @@ namespace eshop.MVC.Controllers
             this.categoryService = categoryService;
         }
 
-        [AllowAnonymous]
+
         public async Task<IActionResult> Index()
         {
             var products = await productService.GetProductsAsync();
